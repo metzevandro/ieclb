@@ -13,6 +13,7 @@ import {
   CardHeader,
   CardImage,
 } from "design-system-zeroz";
+import Image from "next/image";
 
 const volunteerTypes = [
   {
@@ -49,9 +50,14 @@ export default function Voluntarios() {
     >
       <section style={{ display: "flex", gap: "24px" }}>
         {volunteerTypes.map((volunteer) => (
-          <Card>
+          <Card key={volunteer.id}>
             <CardImage>
-              <img height={400} src={volunteer.url} alt={volunteer.title} />
+              <Image
+                width={400}
+                height={500}
+                src={volunteer.url}
+                alt={volunteer.title}
+              />
             </CardImage>
             <CardHeader
               title={volunteer.title}

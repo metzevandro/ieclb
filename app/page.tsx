@@ -7,10 +7,11 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
+  CardImage,
   Header,
-  Image,
   Page,
 } from "design-system-zeroz";
+import Image from "next/image";
 
 import React from "react";
 
@@ -27,7 +28,9 @@ export default function Home() {
             <CardContent>
               <div style={{ display: "flex", gap: "24px" }}>
                 <Image
-                  width="500"
+                  alt="s"
+                  width={500}
+                  height={500}
                   src="https://www.luterano.org.br/wp-content/uploads/2024/07/Senhas-Diarias-10-07-2024-1024x1024.jpg.avif"
                 ></Image>
                 <div
@@ -61,16 +64,19 @@ export default function Home() {
       <div style={{ display: "flex", gap: "24px" }}>
         <div className="col-6">
           <Card>
+            <CardImage>
+              <Image
+                alt="s"
+                width={500}
+                height={500}
+                src="https://www.luterano.org.br/wp-content/uploads/2024/07/Concertos-Camerata-Antiqua-200-anos.png.avif"
+              ></Image>
+            </CardImage>
             <CardHeader
               title="Notícias"
               description="Concertos celebram os 200 Anos de Presença Luterana no Brasil"
             />
-            <CardContent>
-              <Image
-                height="500"
-                src="https://www.luterano.org.br/wp-content/uploads/2024/07/Concertos-Camerata-Antiqua-200-anos.png.avif"
-              ></Image>
-            </CardContent>
+
             <CardFooter>
               <div style={{ width: "fit-content" }}>
                 <Button size="md" variant="primary" label="Ver mais" />
@@ -80,16 +86,19 @@ export default function Home() {
         </div>
         <div className="col-6">
           <Card>
+            <CardImage>
+              <Image
+                alt="s"
+                width={500}
+                height={500}
+                src="https://www.luterano.org.br/wp-content/uploads/2024/07/Dia-Sinodal-da-Igreja-pavilhao.jpg.avif"
+              ></Image>
+            </CardImage>
             <CardHeader
               title="Eventos"
               description="Dia Sinodal da Igreja comemora 200 Anos de Presença Luterana no Brasil"
             />
-            <CardContent>
-              <Image
-                height="500"
-                src="https://www.luterano.org.br/wp-content/uploads/2024/07/Dia-Sinodal-da-Igreja-pavilhao.jpg.avif"
-              ></Image>
-            </CardContent>
+
             <CardFooter>
               <div style={{ width: "fit-content" }}>
                 <Button size="md" variant="primary" label="Ver mais" />
@@ -101,16 +110,19 @@ export default function Home() {
       <div style={{ display: "flex", gap: "24px" }}>
         <div className="col-6">
           <Card>
+            <CardImage>
+              <Image
+                alt="s"
+                width={500}
+                height={500}
+                src="https://th.bing.com/th/id/R.56d05fbe4116d477998620ea0010749f?rik=NpuBEfKZqnkl4A&riu=http%3a%2f%2flavras.tv%2fsite%2fwp-content%2fuploads%2f2021%2f03%2fdoa-alimentos-1-2048x1365.jpg&ehk=OMhwVx7HLhss6anqbrkqRz5%2fvgrTen7AQoHxzAA%2f%2bGk%3d&risl=&pid=ImgRaw&r=0"
+              ></Image>
+            </CardImage>
             <CardHeader
               title="Doações"
               description="LELUT desenvolve ação de doações para pessoas atingidas pelas enchentes"
             />
-            <CardContent>
-              <Image
-                height="500"
-                src="https://th.bing.com/th/id/R.56d05fbe4116d477998620ea0010749f?rik=NpuBEfKZqnkl4A&riu=http%3a%2f%2flavras.tv%2fsite%2fwp-content%2fuploads%2f2021%2f03%2fdoa-alimentos-1-2048x1365.jpg&ehk=OMhwVx7HLhss6anqbrkqRz5%2fvgrTen7AQoHxzAA%2f%2bGk%3d&risl=&pid=ImgRaw&r=0"
-              ></Image>
-            </CardContent>
+
             <CardFooter>
               <div style={{ width: "fit-content" }}>
                 <Button size="md" variant="primary" label="Ver mais" />
@@ -120,16 +132,19 @@ export default function Home() {
         </div>
         <div className="col-6">
           <Card>
+            <CardImage>
+              <Image
+                alt="s"
+                width={500}
+                height={500}
+                src="https://th.bing.com/th/id/OIP.ai0ecZAo-3wMf6epesMtjAHaE7?rs=1&pid=ImgDetMain"
+              ></Image>
+            </CardImage>
             <CardHeader
               title="Voluntários"
               description="Voluntários desenvolvem projeto com crianças"
             />
-            <CardContent>
-              <Image
-                height="500"
-                src="https://th.bing.com/th/id/OIP.ai0ecZAo-3wMf6epesMtjAHaE7?rs=1&pid=ImgDetMain"
-              ></Image>
-            </CardContent>
+
             <CardFooter>
               <div style={{ width: "fit-content" }}>
                 <Button size="md" variant="primary" label="Ver mais" />

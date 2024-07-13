@@ -9,11 +9,11 @@ import {
   CardFooter,
   CardHeader,
   CardImage,
-  Image,
   InputNumber,
   InputSelect,
   Page,
 } from "design-system-zeroz";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Doacoes() {
@@ -44,13 +44,13 @@ export default function Doacoes() {
     },
   ];
 
-  const impactus = impactos.map((impacto) => {
+  const impactus = impactos.map((impacto, impactoIndex) => {
     return (
-      <div>
+      <div key={impactoIndex}>
         <h4>{impacto.titulo}</h4>
         <div>
-          {impacto.itens.map((item) => (
-            <p>↪{item}</p>
+          {impacto.itens.map((item, itemIndex) => (
+            <p key={itemIndex}>↪{item}</p>
           ))}
         </div>
       </div>
@@ -74,8 +74,9 @@ export default function Doacoes() {
       <main style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
         <Card>
           <CardImage>
-            {" "}
-            <img
+            <Image
+              width={500}
+              height={500}
               style={{ objectFit: "contain" }}
               src="https://1.bp.blogspot.com/-jB___3a6sp4/URRRWVPMh2I/AAAAAAAAALQ/DuxwYFKeXzk/s1600/Horizontal_Cor.jpg"
               alt="Imagem ilustrativa da causa da IECLB"
@@ -94,7 +95,6 @@ export default function Doacoes() {
           <CardHeader description="" title=""></CardHeader>
           <CardContent>
             <h2>Como sua doação gera impacto:</h2>
-
             {impactus}
           </CardContent>
           <CardFooter>

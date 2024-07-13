@@ -9,11 +9,12 @@ import {
   InputSelect,
   Page,
 } from "design-system-zeroz";
+import Image from "next/image";
 
 interface PostProps {
   title: string;
   content: string;
-  date: Date; // Change date type to Date
+  date: Date;
   imageUrl: string;
 }
 
@@ -30,7 +31,7 @@ function Post({ title, content, date, imageUrl }: PostProps) {
   return (
     <Card>
       <CardImage>
-        <img src={imageUrl} alt={title} />
+        <Image height={1080} width={1920} src={imageUrl} alt={title} />
       </CardImage>
       <CardHeader title={title} description={content}></CardHeader>
       <CardFooter>

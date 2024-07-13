@@ -1,4 +1,17 @@
 const nextConfig = {
+  images: {
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  
+    domains: [
+      "www.luterano.org.br",
+      "th.bing.com",
+      "1.bp.blogspot.com",
+      "images.pexels.com",
+      "media.istockphoto.com",
+      "placehold.co"
+    ],
+  },
   webpack: (config, { isServer }) => {
     // Add TypeScript loader for files in 'design-system-zeroz' package
     config.module.rules.push({
